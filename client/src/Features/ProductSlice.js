@@ -9,7 +9,9 @@ export const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    addProduct: (state, action) => {},
+    addProduct: (state, action) => {
+      state.value.push(action.payload);
+    },
     deleteProduct: (state, action) => {},
     updateProduct: (state, action) => {},
   },
